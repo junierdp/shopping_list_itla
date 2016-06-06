@@ -70,7 +70,13 @@ void Menu::routeAction(int option)
 void Menu::listItems()
 {
 	//TODO: Implement this
-	cout << "Implement  Menu::listItems" << endl;
+	Element* e = list -> getFirst();
+	cout << "**********List of your items**********";
+	while(e != NULL)
+	{
+		cout << e -> getName() << endl;
+		e = e -> getNext();
+	}
 }
 
 void Menu::addItems()
