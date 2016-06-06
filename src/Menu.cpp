@@ -9,6 +9,8 @@
 #include <iostream>
 using namespace std;
 
+List* list = new List(); // creating a object of the List.cpp class.
+
 Menu::Menu()
 {
 
@@ -74,7 +76,15 @@ void Menu::listItems()
 void Menu::addItems()
 {
 	//TODO: Implement this
-	cout << "Implement  Menu::addItems" << endl;
+	string name;
+	cout << "**********Add an item**********";
+	cout << "Type the name of the item => ";
+	cin >> name;
+
+	Element* e = new Element(name);
+	list -> add(e);
+
+	cout << "The item has been added.";
 }
 
 void Menu::removeItems()
