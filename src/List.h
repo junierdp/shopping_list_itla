@@ -14,6 +14,10 @@ class List
 		List();
 		void add(Element* element);
 		void remove(int index);
+		Element* getFirst() //to access the private attribute _first
+		{
+			return _first;
+		}
 	private:
 		Element* _first;
 		Element* _last;
