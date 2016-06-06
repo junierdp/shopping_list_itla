@@ -12,6 +12,15 @@ class Element
 {
 	public:
 		Element(std::string name);
+		std::string getName() // to access the private attribute _name
+		{
+			return _name;
+		}
+
+		Element* getNext() // to access the private attribute _next
+		{
+			return _next;
+		}
 
 	private:
 		Element* _next;
