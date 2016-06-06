@@ -71,11 +71,16 @@ void Menu::listItems()
 {
 	//TODO: Implement this
 	Element* e = list -> getFirst();
-	cout << "**********List of your items**********";
-	while(e != NULL)
-	{
-		cout << e -> getName() << endl;
-		e = e -> getNext();
+	if(e == NULL){
+		cout << "The list is empty." << endl;
+	}
+	else{
+		cout << "**********List of your items**********" << endl ;
+		while(e != NULL)
+		{
+			cout << e -> getName() << endl;
+			e = e -> getNext();
+		}
 	}
 }
 
@@ -83,7 +88,7 @@ void Menu::addItems()
 {
 	//TODO: Implement this
 	string name;
-	cout << "**********Add an item**********";
+	cout << "**********Add an item**********" << endl;
 	cout << "Type the name of the item => ";
 	cin >> name;
 
