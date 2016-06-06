@@ -29,8 +29,29 @@ void List::add(Element* element)
 	}
 }
 
-void List::remove(int index)
+void List::remove(std::string name)
 {
 	//TODO: Implement this method
-	cout << "You should write the code for removing the index " << index << endl;
+	Element* _aux = _first; //stores the first list item
+	Element* _before = NULL; //
+
+	if(_first != NULL){
+		while(_aux != NULL){
+			if(_aux -> getName() == name){
+				if (_aux == _first){
+					_aux = _aux -> _next; 
+				}
+				else{
+					_before -> _next = _aux -> _next;
+					delete(_aux);
+				}
+				return;
+			}
+			_before = _aux;
+			_aux = _aux -> _next;
+		}
+	}
+	else{
+		cout << "The list hasn't items." << endl;
+	}
 }
