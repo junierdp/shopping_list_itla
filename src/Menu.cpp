@@ -102,6 +102,13 @@ void Menu::removeItems()
 {
 	//TODO: Implement this
 	cout << "Implement  Menu::removeItems" << endl;
+	string name;
+	cout << "**********Remove an item**********" << endl;
+	cout << "Type the name of the item => ";
+	cin >> name;
+	list -> remove(name); //Passing the name of the item that the user typed to remove method in list.cpp
+
+	cout << "Item deleted." << endl;
 }
 
 void Menu::show()
