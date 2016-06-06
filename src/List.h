@@ -13,7 +13,7 @@ class List
 	public:
 		List();
 		void add(Element* element);
-		void remove(int index);
+		void remove(std::string name);
 		Element* getFirst() //to access the private attribute _first
 		{
 			return _first;
